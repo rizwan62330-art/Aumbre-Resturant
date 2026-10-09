@@ -1,0 +1,43 @@
+@layer base {
+  :root {
+    scrollbar-color: var(--color-gold) var(--color-bg);
+    scrollbar-width: thin;
+  }
+  html {
+    @apply scroll-pt-[100px];
+  }
+  button,
+  a,
+  input {
+    @apply touch-manipulation;
+  }
+  button {
+    @apply cursor-pointer;
+  }
+  button:disabled {
+    @apply cursor-wait opacity-65;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-gold-light);
+    @apply outline-offset-4;
+  }
+  textarea {
+    @apply resize-none;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation: none !important;
+      transition: none !important;
+    }
+    html {
+      @apply scroll-auto;
+    }
+  }
+}
+@layer components {
+  .navbar_profile a {
+    @apply flex p-2 text-accent;
+  }
+}

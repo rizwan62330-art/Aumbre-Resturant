@@ -1,0 +1,20 @@
+/* Keep the reference's original reset; load Tailwind's theme and utilities. */
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+@import "./main.css";
+@import "./auth.css";
+@source "../";
+
+@theme inline {
+  --color-forest: var(--color-bg);
+  --color-forest-deep: var(--color-bg-deep);
+  --color-accent: var(--color-gold);
+  --color-accent-light: var(--color-gold-light);
+  --color-parchment: var(--color-cream);
+  --color-divider: var(--color-line);
+  --color-error: #ffa69e;
+  --font-restaurant: var(--font-body);
+  --font-heading: var(--font-display);
+  --font-ornament: var(--font-gothic);
+}
